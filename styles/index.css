@@ -632,7 +632,7 @@ svg {
 
 #section-E .carousel {
   text-align: center;
-  width: 479px;
+  width: 410px;
   height: 400px;
   overflow: hidden;
 }
@@ -641,7 +641,7 @@ svg {
   transition: transform 0.5s linear;
 }
 #section-E .container {
-  min-width: 479px;
+  min-width: 410px;
   height: 400px;
   padding: 0 40px;
   line-height: 2rem;
