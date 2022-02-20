@@ -98,7 +98,7 @@ function run() {
     if (index > review.length - 1) {
         index = 0;
     }
-    reviews.style.transform = `translateX(${-index * 479}px )`;
+    reviews.style.transform = `translateX(${-index * 410}px )`;
 }
 
 setInterval(() => {
