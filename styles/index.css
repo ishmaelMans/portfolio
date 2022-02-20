@@ -378,7 +378,7 @@ main {
 #section-D h1,
 #section-E h1, 
 #section-F h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 50px 0 0 0;
 }
 #section-B h3,
@@ -399,7 +399,7 @@ main {
 }
 #section-B ul {
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 50px;
 }
 #section-B ul li {
