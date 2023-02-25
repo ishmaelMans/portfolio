@@ -1,3 +1,7 @@
+/**
+ * The Javascript also could be splitted in mutil files. That will make the life
+ * of everyone easier.
+ */
 const btnClose = document.querySelector('#side-menu');
 const menuBtn = document.querySelector('.menu-btn')
 const btnOpen = document.querySelector('#open-slide');
@@ -10,6 +14,12 @@ let lastScrollY = window.scrollY
 let per;
 // navbar list..........................................................
 const checkForHightLight = (e) => {
+    /**
+     * Here you are using a function before of define it. This just works because
+     * you are creating this function checkForHightLight but it is calling it,
+     * but this is a seroiusly error in javascript. Always call your functions
+     * after thye been created.
+     */
     removeHighLight()
     e.target.classList.add('current')
 }
@@ -18,16 +28,27 @@ const checkForHightLight = (e) => {
 const removeHighLight = () => {
     checkList.forEach(list => list.classList.remove('current'))
 }
+/**
+ * This like others function could be in other file. A files just for defines
+ * addEventListeners. Will be better to read all of them.
+ */
 checkList.forEach(list => list.addEventListener('click', checkForHightLight))
 
 // Hamburger button......................................................
 function toggle() {
+    /**
+     * Good use of toggle.
+     */
     btnClose.classList.toggle('active');
     menuBtn.classList.toggle('open');
     btnOpen.classList.toggle('active')
 }
 btnOpen.addEventListener('click', toggle, false);
 
+/**
+ * This function don't depends of any other function, so it could be in a separated
+ * file just for that.
+ */
 // Remove side nav........................................................
 list.forEach(each => {
     each.addEventListener('click', () => {
@@ -36,6 +57,9 @@ list.forEach(each => {
     })
 })
 
+/**
+ * Same for the function above.
+ */
 //Nav Animation...........................................................
 const navAnimation = () => {
     if (lastScrollY < window.scrollY) {
@@ -88,6 +112,9 @@ window.addEventListener("scroll", () => {
 
 
 
+/**
+ * I think this could be done by CSS. I have not sure I think could be.
+ */
 // carousel .......................................................
 const reviews = document.querySelector('.carousel-box');
 const review = document.querySelectorAll('.container');

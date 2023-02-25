@@ -6,12 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./styles/index.css" type="text/css" media="all" />
+  <!-- Avoid let code that is not in use commented. If it is not necesary, so then, remove it. -->
   <!-- <script src="script/jquery-3.6.0.js" defer></script> -->
+  <!--
+    The title of the page is very important for SEO (Search Engine Optimization)
+    and I think this is not a good name for a portifolio website. I think this
+    should be Ishmael Mansaray | Portifolio. That describes better what this
+    website is.
+  -->
   <title>MansDev.com</title>
 </head>
 
 <body>
 
+  <!--
+    It is not a good pratice put the same name in id and a class. You need choose
+    one. I prefer using classes for everything, so in this case I would remove
+    the id="navbar" and let just the class="navbar". I could see that you do
+    this quite often, so look your code and try to identify thoses point that
+    you can remove the id that has the same name of a class.
+  -->
   <nav id="navbar" class="navbar">
     <!-- branding -->
     <div class="content-wrap">
@@ -24,10 +38,28 @@
       <!-- open slide -->
       <div id="open-slide" class="open-slide show">
         <div class="menu-btn">
+          <!--
+            Here in this class menu-btn_burger I think you tried to follow the
+            BEM CSS pattern but I think it is not correct. With this pattern I
+            think the correct way of doing this would be menu-btn__burger since
+            the menu-btn will be the block of the content and the burger would be
+            the element. If you are not understanding anything from what I am
+            saying so I think you should read this document https://getbem.com/naming/
+            I also sqw that you did that mistake in others places in your code
+            so I think it would be nice if you try to change it or apply it in
+            the right way once you build the react version of it.
+          -->
           <div class="menu-btn_burger"></div>
         </div>
       </div>
 
+      <!--
+        For better accessibility this element should be a <nav /> tag instead of
+        a div. In this navigation I just saw this problem, the rest is perfect!
+        Well done. Usually a page should have only one <nav /> tag and it should
+        be followed by <ul /> or <ol /> and it should have <li /> children. So,
+        you have just missed the <nav /> tag.
+      -->
       <div class="desk-nav">
         <ul>
           <li><a class="check current" href="#">HOME</a></li>
@@ -40,6 +72,18 @@
     </div>
   </nav>
 
+  <!--
+    Two things here:
+
+    1) You don't need to comment your code when it is obvious that this is a new section.
+    You did it very often in your code and that just represents that you need to
+    split your html file into other files. You can't do it with pure HTML but you can
+    do it with React so try to apply that in React like we discussed.
+
+    2) Here I can that is another nav. For accessibility porpuses you can't have
+    more then one nav in your website. So you should choose one and remove the
+    other.
+  -->
   <!-- side-menu -->
   <div id="side-menu" class="side-nav">
     <!-- <a href="#" class="btn-close">&times;</a> -->
@@ -55,15 +99,57 @@
   <!-- showcase Area-->
   <div id="showcase"></div>
 
+  <!--
+    I liked that you used main here, that is really good for SEO (Search Engine
+    Optimization e.g. Google, Bing, DuckDuck Go search engines), but I can see
+    that you didn't use <section /> tag even once. You show use more that for
+    new section that you are build. With that your code will be more semantic.
+  -->
   <!-- main-section-->
   <main>
+    <!--
+      Two things here:
+
+      1) Like here! This is a perfect usage for <section /> tag. You should use
+      <section /> tag here.
+
+      2) I saw that you put classes name like "section-A", "section-B", "section-C"
+      and that is not good for your code. You should name it proprely. This section
+      for example could be your name ishmael-mansary, the next one should be
+      about-me and so one.
+    -->
     <!-- section-A Ishmael-Mansaray-->
     <div id="section-A">
       <div class="a-circle">
         <div class="moving-circle"></div>
+        <!--
+          THIS IS VERY IMPORTANT!!! For best pratices, for SEO, for accesibility,
+          for semantic, every page should have ONLY ONE <h1 /> tag and I saw that
+          you have one <h1 /> tag for EACH section. That definitively is not good.
+          The <h1 /> tag holds the most important text for that page. In this case
+          I think this <h1 /> should be keeped and you should remove the other ones.
+          As it is your portifolio, your name should be the most important information.
+        -->
         <h1>Ishmael Mansaray</h1>
       </div>
+      <!--
+        Naming things is hard I know haha. That will be improved with the time
+        but lets talk about this one "text-wrap". If I just looked for this class
+        what I could know about this? Ok, this element is wrapping some text...
+        Ok, like the <body /> tag is doing also. So, the point here is: This name
+        is too vage! In programming we need to be very, very, very specific about
+        the naming. We should be able to know the maximum that we can by just reading
+        the name. I think this will be better if you put names like:
+        suffix-texts-wrapper or typing-animation-texts-wrapper.
+        Don't be afraid to put big names on it, since it describes better what it
+        is.
+      -->
       <div class="text-wrap">
+        <!--
+          This is also other important thing. Usually, simple texts should be
+          inside of <span /> or <p />, never inside of a <div />. I think inclusive
+          that the React complains about this.
+        -->
         <div class="static-txt">I'm a</div>
         <ul class="dynamic-txts">
           <li><span>Youtuber</span></li>
@@ -109,7 +195,20 @@
           <li><span>RESIDENCE:</span> NIGERIA</li>
           <li><span>FREELANCE:</span> Available</li>
           <li><span>ADDRESS:</span> Lagos</li>
+          <!--
+            Improvement: Here you can use the <a /> using the tel feature to allow
+            the people that are seeing your website in mobile phones call you directly.
+            Here is it the exemple
+
+            <a href=“tel:+2347088607716”>+234 708 86 07 716</a>
+          -->
           <li><span>PHONE:</span> +234 708 86 07 716</li>
+          <!--
+            Improvement: The same here for email. You can use the emailto feature
+            to allow user to send you email directly. This works also in desktop.
+
+            <a href="mailto:mansarayishmael17@gmail.com">
+          -->
           <li><span>Email:</span> mansarayishmael17@gmail.com</li>
         </ul>
       </div>
@@ -127,6 +226,15 @@
               UI & UX.</p>
             <div class="skill">
               <div class="skill-bar">
+                <!--
+                  VERY IMPORTANT HERE! You have used the "per" name to send some
+                  data to Javascript. That is good, I liked, but doing this the
+                  way you did, is not the correct way. Instead of passing the pure
+                  "per" you should pass "data-per" and getting it on JS side.
+
+                  You can know more about this here:
+                  https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*
+                -->
                 <div class="skill-per js-scroll" per="80%"></div>
               </div>
             </div>
@@ -177,6 +285,15 @@
         <div class="code-skills">
 
           <div class="code-skill">
+            <!--
+              Again about the naming. Avoid contrat the name, this just add one
+              more layer of complexity for whom is reading the code, because now
+              my brain will automatically (but spend energy) to complete the word.
+              Can look like idiot but it is very serius.
+
+              Bad name -> cir-bar
+              Good name -> circular-bar
+            -->
             <div class="cir-bar">
               <div class="outer">
                 <div class="inner">
@@ -283,6 +400,18 @@
       <div class="carousel">
         <div class="carousel-box">
           <div class="container">
+            <!--
+              SUPER VERY IMPORTANT THING HERE!!! Nerver let a image without an
+              alternative description, that makes a hug difference for blind
+              people. Also one alttenative text don't put something generic like,
+              "a man photo", look for the image and describes exactaly what are
+              you seeing. In this case for example your would put something like this:
+
+              "Photo of Ishmael Mansaray, a black young man, black eyes, short hair,
+              little black beard in chin, wearing a gray shirt, staring the camera"
+
+              You don't know how much this will help people with deficience in see.
+            -->
             <img src="./img/img1.jpg" alt="">
             <h2>Akinde James</h2>
             <h3>CEO</h3>
@@ -322,6 +451,10 @@
         <form id="form" class="form" action="">
           <div class="my-form">
             <label for="fullname">FULL NAME <span>*</span></label>
+            <!--
+              It is good define a maxlength and minlength for input fields. That
+              applys also for textarea.
+             -->
             <input type="text" id="fullname" name="fullname" placeholder="ej.: Mansaray ishmael">
           </div>
 
@@ -335,6 +468,11 @@
             <textarea name="message" placeholder="To write" id="message" cols="30" rows="10"></textarea>
           </div>
 
+          <!--
+            Inside a form should have at least one button with type="submit",
+            that is very important for it works well. This button should have
+            the type="submit" on it.
+          -->
           <button id="send">SEND MESSAGE</button>
         </form>
       </div>
@@ -343,6 +481,9 @@
 
 
   <script src="script/index.js"></script>
+  <!--
+    Again, if it is not using, remove the uneccessary comments.
+  -->
   <!-- <script src="https://kit.fontawesome.com/e657d65557.js" crossorigin="anonymous"></script> -->
 
 </body>
