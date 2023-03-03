@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
 }
-*, *::before, *::after {
+*, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,6 +12,7 @@ html {
 :root {
   --nav-color: #555555;
   --dark-color: #303030;
+  --green-color: #45b835;
 }
 body {
   font-family: 'Poppins';
@@ -24,7 +25,7 @@ a {
   text-decoration: none;
   color: #fff;
 }
-.content-wrap {
+.content__wrap {
   width: 80%;
   margin: 0 auto;
 }
@@ -47,7 +48,7 @@ a {
 .navbar.active {
   background-color: var(--nav-color);
 }
-.open-slide {
+.open__slide {
   display: block;
   float: right;
   padding: 10px;
@@ -55,52 +56,52 @@ a {
   right: 20px;
   top: 20px;
 }
-.open-slide.active {
+.open__slide.active {
   z-index: 5;
 }
-.desk-nav {
+.desk__nav {
   display: none;
   float: right;
   margin-top: 15px;
 }
-.desk-nav ul {
+.desk__nav ul {
   list-style: none;
   margin: 0;
 }
-.desk-nav ul li {
+.desk__nav ul li {
   display: inline-block;
   padding: 0 25px 0 20px;
 }
 .check.current {
   font-weight: bold;
-  color: #45b835;
+  color: var(--green-color);
 }
-.desk-nav ul li a {
+.desk__nav ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 1.2rem;
 
 }
-.desk-nav ul li a:hover {
+.desk__nav ul li a:hover {
   letter-spacing: 1px;
-  color: #45b835;
+  color: var(--green-color);
 }
-.download-cv {
+.download__cv {
   display: none;
   float: right;
   margin-top: 1.5rem;
   /* transform: translateX(600px); */
 }
-.download-cv a {
-  color: #45b835;
+.download__cv a {
+  color: var(--green-color);
   font-weight: 900;
   font-size: 1.2rem;
-  border: 1px solid #45b835;
+  border: 1px solid var(--green-color);
   border-radius: 40px;
   padding: 25px;
 }
 
-.side-nav {
+.side__nav {
   min-height: 100%;
   width: 100%;
   position: fixed;
@@ -113,14 +114,14 @@ a {
   padding: 20px 0;
   transition: .7s;
 }
-.side-nav.active {
+.side__nav.active {
   transform: translateY(0)
 }
-.side-nav ul {
+.side__nav ul {
   list-style-type: none;
   margin-top: 70px;
 }
-.side-nav ul li a {
+.side__nav ul li a {
   text-align: center;
   padding: 20px 10px 20px 20px;
   text-decoration: none;
@@ -130,11 +131,11 @@ a {
   display: block;
   transition: 0.3s;
 }
-.side-nav a:hover {
+.side__nav a:hover {
   color: #45b835;
 }
 /* hamburger-menu...............................*/
-.menu-btn {
+.menu__btn {
     position: relative;
     display: flex;
     justify-content: center;
@@ -145,7 +146,7 @@ a {
     transition: all .5s ease-in-out;
     /* border: 3px solid #fff; */
 }
-.menu-btn_burger {
+.menu__btn--burger {
     width: 30px;
     height: 3px;
     background: #fff;
@@ -153,8 +154,8 @@ a {
     box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
     transition: all .2s ease-in-out;
 }
-.menu-btn_burger::before, 
-.menu-btn_burger::after  {
+.menu__btn--burger::before, 
+.menu__btn--burger::after  {
     content: '';
     position: absolute;
     width: 30px;
@@ -164,22 +165,22 @@ a {
     box-shadow: 0 2px 5px rgba(53, 33, 26, 0.2);
     transition: all .5s ease-in-out;
 }
-.menu-btn_burger::before {
+.menu__btn--burger::before {
     transform: translateY(-10px);
 }
-.menu-btn_burger::after {
+.menu__btn--burger::after {
     transform: translateY(10px);
 }
 /* Animation */
-.menu-btn.open .menu-btn_burger {
+.menu__btn.open .menu__btn--burger {
     transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
 }
-.menu-btn.open .menu-btn_burger::before {
+.menu__btn.open .menu__btn--burger::before {
     transform: rotate(45deg) translate(35px, -35px);
 }
-.menu-btn.open .menu-btn_burger::after {
+.menu__btn.open .menu__btn--burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
 }
 /* hamburger menu end.........................*/
@@ -191,7 +192,6 @@ main {
 }
 /* showcase Starts................................... */
 #showcase {
-  /* min-width: 412px; */
   width: 100%;
   min-height: 600px;
   overflow: hidden;
@@ -209,7 +209,7 @@ main {
   width: 100%;
 } */
 /* section-A Ismael-Mansaray Starts.................................. */
-#section-A {
+#section__A {
   width: 100%;
   min-height: 550px;
   background-color: var(--dark-color);
@@ -224,13 +224,13 @@ main {
   justify-content: center;
   /* overflow: hidden; */
 }
-#section-A .txt {
+#section__A .txt {
   margin-top: 120px;
   padding-bottom: 40px;
   font-size: 1.1rem;
   line-height: 2rem;
 }
-#section-A .a-circle {
+#section__A .a__circle {
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -238,7 +238,7 @@ main {
   position: absolute;
   transform: translateY(-220px);
 }
-#section-A .a-circle .moving-circle {
+#section__A .a__circle .moving__circle {
   width: 230px;
   height: 230px;
   border-radius: 50%;
@@ -253,7 +253,7 @@ main {
     transform: rotate(360deg)
   }
 }
-#section-A .a-circle::after {
+#section__A .a__circle::after {
   content: '';
   position: absolute;
   top: 119px;
@@ -262,7 +262,7 @@ main {
   height: 150px;
   background-color: var(--dark-color);
 }
-#section-A .a-circle h1 {
+#section__A .a__circle h1 {
   font-size: 2.5rem;
   margin-top: 75px;
   line-height: 40pt;
@@ -270,23 +270,23 @@ main {
   z-index: 1;
 }
 /* text Animation*/
-.text-wrap {
+.text__wrap {
   font-size: 1.5rem;
   display: inline-flex;
   text-align: left;
   position: absolute;
   transform: translateY(-110px)
 }
-.text-wrap .static-txt {
+.text__wrap .static__txt {
   font-weight: 400;
 }
-.text-wrap .dynamic-txts {
+.text__wrap .dynamic__txts {
   margin-left: 10px;
   height: 32px;
   line-height: 32px;
   overflow: hidden;
 }
-.dynamic-txts li {
+.dynamic__txts li {
   color: #45b835;
   list-style: none;
   font-weight: 500;
@@ -299,10 +299,10 @@ main {
     top: -128px;
   }
 }
-.dynamic-txts li span {
+.dynamic__txts li span {
   position: relative;
 }
-.dynamic-txts li span::after {
+.dynamic__txts li span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -321,7 +321,7 @@ main {
 }
 /* text Animation Ends*/
 
-#section-A .btn {
+#section__A .btn {
   font-size: 2rem;
   display: inline-block;
   text-decoration: none;
@@ -330,11 +330,11 @@ main {
   border: 1px solid #45b835;
   border-radius: 30px;
 }
-#section-A .btn:hover {
+#section__A .btn:hover {
   color: var(--dark-color);
   background-color: #45b835;
 }
-.arrow-motion {
+.arrow__motion {
   display: none;
   align-items: center;
   justify-content: center;
@@ -343,13 +343,13 @@ main {
   bottom: 125px;
   right: 90px;
 }
-.arrow-motion img{
+.arrow__motion img{
   display: block;
   width: 15px;
   animation: arrow 400ms ease-in-out infinite; 
 }
 
-.arrow-motion p{
+.arrow__motion p{
   margin-top: 10px;
 }
 
@@ -362,7 +362,7 @@ main {
 
 
 /* section-B About-me Starts................................*/
-#section-B {
+#section__B {
   min-width: 100%;
   /* width: 497px; */
   min-height: 800px;
@@ -373,40 +373,40 @@ main {
   overflow: hidden;
 
 }
-#section-B h1,
-#section-C h1,
-#section-D h1,
-#section-E h1, 
-#section-F h1 {
+#section__B h1,
+#section__C h1,
+#section__D h1,
+#section__E h1, 
+#section__F h1 {
   font-size: 2rem;
   padding: 50px 0 0 0;
 }
-#section-B h3,
-#section-C h3,
-#section-D h3,
-#section-E h3,
-#section-F h3{
+#section__B h3,
+#section__C h3,
+#section__D h3,
+#section__E h3,
+#section__F h3{
   padding: 10px 0 40px 0;
   font-weight: 400;
   color:#45b835;
 }
-#section-B p {
+#section__B p {
   text-align: center;
   text-justify: none;
   font-size: 12pt;
   line-height: 20pt;
   margin-bottom: 30px;
 }
-#section-B ul {
+#section__B ul {
   text-align: left;
   font-size: 1.1rem;
   margin-bottom: 50px;
 }
-#section-B ul li {
+#section__B ul li {
   list-style: none;
   padding: 5px 0;
 }
-#section-B ul li span {
+#section__B ul li span {
   color: #45b835;
   font-weight: bold;
 }
@@ -414,7 +414,7 @@ main {
 
 
 /* section-C Design-skills Starts............................ */
-#section-C {
+#section__C {
   min-width: 100%;
   /* width: 497px; */
   min-height: 600px;
@@ -425,22 +425,22 @@ main {
   overflow: hidden;
 
 }
-#section-C ul li h2 {
+#section__C ul li h2 {
   padding-bottom: 20px;
 }
-#section-C ul li p {
+#section__C ul li p {
   line-height: 15pt;
 }
-#section-C progress {
+#section__C progress {
   width: 90%;
   height: 3px;
   background-color: #45b835;
 }
-#section-C ul {
+#section__C ul {
   text-align: left;
   list-style: none;
 }
-#section-C ul li {
+#section__C ul li {
   padding-bottom: 50px;
 }
 /* progress bar............... */
@@ -450,19 +450,19 @@ main {
   padding-top: 50px;
   overflow: hidden;
 }
-.skill-bar {
+.skill__bar {
   height: 5px;
   background-color: #cacaca;
   border-radius: 8px;
 }
-.skill-per {
+.skill__per {
   height: 5px;
   background-color: #45b835;
   border-radius: 8px;
   width: 0;
   position: relative;
 }
-.skill-per::before {
+.skill__per::before {
   content: attr(per);
   position: absolute;
   padding: 4px 6px;
@@ -474,7 +474,7 @@ main {
   right: 0;
   transform: translateX(50%);
 }
-.skill-per::after {
+.skill__per::after {
   content: '';
   position: absolute;
   width: 8px;
@@ -501,7 +501,7 @@ main {
 /* section-C Ends.......................................... */
 
 /* section-D Coding-skills starts.......................... */
-#section-D {
+#section__D {
   min-width: 100%;
   /* width: 497px; */
   min-height: 600px;
@@ -512,13 +512,13 @@ main {
   overflow: hidden;
 
 }
-.code-skills {
+.code__skills {
   display: grid;
   justify-content: space-around;
   align-content: center;
   grid-template-columns: repeat(2, auto);
 }
-#section-D .code-skill {
+#section__D .code__skill {
   width: 160px;
   height: 170px;
   text-align: left;
@@ -528,12 +528,12 @@ main {
   justify-content: center;
   flex-direction: column;
 }
-#section-D .code-skill h2 {
+#section__D .code__skill h2 {
   color: #fff;
   padding-top: 30px ;
   padding-bottom: 20px;
 }
-.cir-bar {
+.cir__bar {
     width: 100px;
     height: 100px;
     /* background-color:lawngreen; */
@@ -574,16 +574,16 @@ main {
     stroke-dashoffset: 300;
     /* animation: anim 2s linear forwards; */
 }
-.progress.html-ani {
+.progress.html__ani {
   animation: html-ani 2s linear forwards;
 }
-.progress.css-ani{
+.progress.css__ani{
   animation: css-ani 2s linear forwards;
 }
-.progress.java-ani {
+.progress.java__ani {
     animation: css-ani 2s linear forwards;
 }
-.progress.php-ani {
+.progress.php__ani {
     animation: php-ani 2s linear forwards;
 }
 @keyframes php-ani {
@@ -614,9 +614,8 @@ svg {
 /* section-D starts.............................*/
 
 /* section-E Reviews starts.............................*/
-#section-E {
+#section__E {
   min-width: 100%;
-  /* width: 497px; */
   min-height: 600px;
   display: flex;
   justify-content: center;
@@ -627,20 +626,19 @@ svg {
   color: #fff;
   border-bottom: 1px dashed #fff ;
   overflow: hidden;
-
 }
 
-#section-E .carousel {
+#section__E .carousel {
   text-align: center;
   width: 410px;
   height: 400px;
   overflow: hidden;
 }
-#section-E .carousel-box {
+#section__E .carousel__box {
   display: flex;
   transition: transform 0.5s linear;
 }
-#section-E .container {
+#section__E .container {
   min-width: 410px;
   height: 400px;
   padding: 0 40px;
@@ -648,7 +646,7 @@ svg {
   font-size: 1.2rem;
   /* transition: transform 0.7 linear; */
 }
-#section-E .container img {
+#section__E .container img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -661,10 +659,8 @@ svg {
 /* section-E ends.............................*/
 
 
-
-
 /* section-F Contact starts.............................*/
-#section-F {
+#section__F {
   min-width: 100%;
   /* width: 497px; */
   min-height: 700px;
@@ -676,11 +672,11 @@ svg {
 /* #section-E form {
   margin: 40px 0;
 } */
-.my-form{
+.my__form{
   position: relative;
   margin-bottom: 50px;
 }
-#section-F #fullname, #email{
+#section__F #fullname, #email{
   width: 100%;
   height: 50px;
   border-radius: 40px;
@@ -691,7 +687,7 @@ svg {
   font-size: 1.2rem;
   color: #fff;
 }
-#section-F textarea {
+#section__F textarea {
   width: 100%;
   height: 150px;
   border-radius: 40px;
@@ -703,19 +699,19 @@ svg {
   color: #fff;
   overflow-y: hidden;
 }
-#section-F label {
+#section__F label {
   position: absolute;
   background-color: var(--dark-color);
   padding:5px;
   left: 60px;
   top: -10px;
 }
-#section-F label span{
+#section__F label span{
   color: #45b835;
   font-weight: bold;
   font-size: 1rem;
 }
-#section-F button {
+#section__F button {
   width: 100%;
   height: 40px;
   background-color: transparent;
@@ -726,7 +722,7 @@ svg {
   font-weight: bold;
   cursor: pointer;
 }
-#section-F button:hover {
+#section__F button:hover {
   color: var(--dark-color);
   background-color: #45b835;
 }
@@ -736,7 +732,7 @@ svg {
   html {
     scroll-padding-top: 6rem;
   }
-  .open-slide {
+  .open__slide {
     display: none;
   }
   .navbar.active {
@@ -750,10 +746,10 @@ svg {
     /* margin-top: 30px; */
     border-radius: 50px;
   }
-  .desk-nav {
+  .desk__nav {
     display: block;
   }
-  .download-cv {
+  .download__cv {
     display: block;
   }
   #showcase {
@@ -768,45 +764,45 @@ svg {
     width: 55%;
     text-align: left;
   }
-  #section-A {
+  #section__A {
     height: 750px;
   }
-  #section-A .a-circle {
+  #section__A .a__circle {
     position: absolute;
     left: -120px;
     top: 350px;
   }
-  #section-A .a-circle::after {
+  #section__A .a__circle::after {
     top: 0;
     left: 120px;
     height: 250px;
   }
-  #section-A .a-circle h1 {
+  #section__A .a__circle h1 {
     margin-top: 80px;
     line-height: 40pt;
     position: absolute;
     z-index: 1;
   }
-  #section-A .txt {
+  #section__A .txt {
     margin-top: 320px;
   }
-  #section-A .a-circle h1 {
+  #section__A .a__circle h1 {
     text-align: center;
   }
-  .arrow-motion {
+  .arrow__motion {
     display: flex;
   }
-  .text-wrap {
+  .text__wrap {
     position: absolute;
     top: 520px;
     left: 74px;
   }
-  #section-A, 
-  #section-B, 
-  #section-C {
+  #section__A, 
+  #section__B, 
+  #section__C {
     text-align: left;
   }
-  #section-B p {
+  #section__B p {
     text-align: left;
   }
 }
