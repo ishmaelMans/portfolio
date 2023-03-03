@@ -26,11 +26,17 @@ a {
   color: #fff;
 }
 .content__wrap {
+  display: flex;
+  justify-content: space-between;
   width: 80%;
   margin: 0 auto;
 }
-.branding {
+/* .branding {
   display: inline-block;
+} */
+.branding img {
+  width: 50px;
+  height: 50px;
 }
 /* navbar Starts....................................... */
 .navbar {
@@ -49,12 +55,9 @@ a {
   background-color: var(--nav-color);
 }
 .open__slide {
-  display: block;
-  float: right;
   padding: 10px;
   z-index: 1;
   right: 20px;
-  top: 20px;
 }
 .open__slide.active {
   z-index: 5;
@@ -64,10 +67,7 @@ a {
   float: right;
   margin-top: 15px;
 }
-.desk__nav ul {
-  list-style: none;
-  margin: 0;
-}
+
 .desk__nav ul li {
   display: inline-block;
   padding: 0 25px 0 20px;
@@ -118,7 +118,6 @@ a {
   transform: translateY(0)
 }
 .side__nav ul {
-  list-style-type: none;
   margin-top: 70px;
 }
 .side__nav ul li a {
@@ -230,15 +229,15 @@ main {
   font-size: 1.1rem;
   line-height: 2rem;
 }
-#section__A .a__circle {
+#section__A .bg__circle {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   background-color: var(--dark-color);
   position: absolute;
-  transform: translateY(-220px);
+  transform: translateY(-270px);
 }
-#section__A .a__circle .moving__circle {
+#section__A .bg__circle .moving__circle {
   width: 230px;
   height: 230px;
   border-radius: 50%;
@@ -253,7 +252,7 @@ main {
     transform: rotate(360deg)
   }
 }
-#section__A .a__circle::after {
+#section__A .bg__circle::after {
   content: '';
   position: absolute;
   top: 119px;
@@ -262,7 +261,7 @@ main {
   height: 150px;
   background-color: var(--dark-color);
 }
-#section__A .a__circle h1 {
+#section__A .bg__circle h1 {
   font-size: 2.5rem;
   margin-top: 75px;
   line-height: 40pt;
@@ -275,7 +274,7 @@ main {
   display: inline-flex;
   text-align: left;
   position: absolute;
-  transform: translateY(-110px)
+  transform: translateY(-140px);
 }
 .text__wrap .static__txt {
   font-weight: 400;
@@ -364,7 +363,6 @@ main {
 /* section-B About-me Starts................................*/
 #section__B {
   min-width: 100%;
-  /* width: 497px; */
   min-height: 800px;
   background-color: var(--dark-color);
   text-align: center;
@@ -373,13 +371,13 @@ main {
   overflow: hidden;
 
 }
-#section__B h1,
-#section__C h1,
-#section__D h1,
-#section__E h1, 
-#section__F h1 {
+#section__B h2,
+#section__C h2,
+#section__D h2,
+#section__E h2, 
+#section__F h2 {
   font-size: 2rem;
-  padding: 50px 0 0 0;
+  padding-top: 50px;
 }
 #section__B h3,
 #section__C h3,
@@ -528,7 +526,7 @@ main {
   justify-content: center;
   flex-direction: column;
 }
-#section__D .code__skill h2 {
+#section__D .code__skill h4 {
   color: #fff;
   padding-top: 30px ;
   padding-bottom: 20px;
@@ -646,13 +644,15 @@ svg {
   font-size: 1.2rem;
   /* transition: transform 0.7 linear; */
 }
+
+#section__E .container h2, h3{
+  padding: 0;
+}
 #section__E .container img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   overflow: hidden;
-  /* background-color: grey; */
-  /* background-image: url('../img/bg.png'); */
   background-size: cover;
   margin-bottom: 10px;
 }
@@ -767,27 +767,29 @@ svg {
   #section__A {
     height: 750px;
   }
-  #section__A .a__circle {
+  #section__A .bg__circle {
     position: absolute;
-    left: -120px;
+    left: -100px;
     top: 350px;
   }
-  #section__A .a__circle::after {
+  #section__A .bg__circle::after {
+    content: '';
+    position: absolute;
     top: 0;
-    left: 120px;
+    left: 100px;
     height: 250px;
   }
-  #section__A .a__circle h1 {
+  
+  #section__A .bg__circle h1 {
     margin-top: 80px;
     line-height: 40pt;
     position: absolute;
+    left: 30px;
+    text-align: center;
     z-index: 1;
   }
   #section__A .txt {
     margin-top: 320px;
-  }
-  #section__A .a__circle h1 {
-    text-align: center;
   }
   .arrow__motion {
     display: flex;
