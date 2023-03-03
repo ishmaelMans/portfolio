@@ -42,7 +42,7 @@ const navAnimation = () => {
 	} else {
 		navBar.classList.remove("active");
 	}
-	// lastScrollY = window.scrollY;
+	lastScrollY = window.scrollY;
 };
 
 // Progress Bar Starts.....................................................

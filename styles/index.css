@@ -655,8 +655,12 @@ svg {
   min-width: 410px;
   height: 400px;
   padding: 0 40px;
-  line-height: 2rem;
+  line-height: 1.3rem;
   font-size: 1.2rem;
+  /* transition: transform 0.7 linear; */
+}
+#section__E .container p{
+  font-size: 1rem;
   /* transition: transform 0.7 linear; */
 }
 
@@ -677,70 +681,30 @@ svg {
 /* section-F Contact starts.............................*/
 #section__F {
   min-width: 100%;
-  /* width: 497px; */
-  min-height: 700px;
+  min-height: 400px;
   background-color: var(--dark-color);
   text-align: center;
   color: #fff;
   overflow: hidden;
 }
-/* #section-E form {
-  margin: 40px 0;
-} */
-.my__form{
-  position: relative;
-  margin-bottom: 50px;
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0 10px 0 10px;
 }
-#section__F #fullname, #email{
-  width: 100%;
-  height: 50px;
-  border-radius: 40px;
-  background-color: transparent;
-  outline: none;
-  border: 1px solid rgb(204, 204, 204);
-  padding: 30px;
-  font-size: 1.2rem;
-  color: #fff;
+
+.contact__links a{
+  margin: 0 10px 0 10px;
 }
-#section__F textarea {
-  width: 100%;
-  height: 150px;
-  border-radius: 40px;
-  background-color: transparent;
-  outline: none;
-  border: 1px solid rgb(204, 204, 204);
-  padding: 25px;
-  font-size: 1.2rem;
-  color: #fff;
-  overflow-y: hidden;
+.contact__links a:hover{
+  color: var(--green-color)
 }
-#section__F label {
-  position: absolute;
-  background-color: var(--dark-color);
-  padding:5px;
-  left: 60px;
-  top: -10px;
-}
-#section__F label span{
-  color: #45b835;
-  font-weight: bold;
-  font-size: 1rem;
-}
-#section__F button {
-  width: 100%;
-  height: 40px;
-  background-color: transparent;
-  border-radius: 20px;
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-#section__F button:hover {
-  color: var(--dark-color);
-  background-color: #45b835;
-}
+
+
+
 
 /* media query ....................................*/
 @media only screen and (min-width: 990px) {
