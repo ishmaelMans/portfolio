@@ -200,6 +200,8 @@ a {
 
 main { 
   width: 100%;
+  position: absolute;
+  top: 600px;
   
 }
 /* showcase Starts................................... */
@@ -211,7 +213,7 @@ main {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  position: relative;
+  position: fixed;
   z-index: -2;
 }
 /* showcase Ends..................................... */
@@ -230,6 +232,7 @@ main {
   text-align: center;
   line-height: 30px;
   position: relative;
+  /* position: absolute; */
 
   display: flex;
   align-items: center;
@@ -699,8 +702,6 @@ svg {
 .contact__links a:hover{
   color: var(--green-color)
 }
-
-
 
 
 /* media query ....................................*/
