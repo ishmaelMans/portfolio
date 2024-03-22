@@ -88,6 +88,7 @@ a {
   font-weight: bold;
   color: var(--green-color);
 }
+
 .desk__nav ul li a {
   text-decoration: none;
   color: #fff;
@@ -717,7 +718,9 @@ svg {
   .navbar {
     width: 50%;
     margin: 30px 30px;
-    position: fixed;
+    /* border: 1px solid #00ff00;
+    box-shadow: 0 0 20px #00ff00; */
+    position: absolute;
     right: 0;
     top: 0;
     background-color: var(--nav-color);
