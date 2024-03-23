@@ -441,8 +441,14 @@ main {
   overflow: hidden;
 
 }
+
+#section__C h3 {
+  padding-bottom: 10px;
+}
+
 #section__C ul li h2 {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 20px;
 }
 #section__C ul li p {
   line-height: 15pt;
@@ -457,13 +463,17 @@ main {
   list-style: none;
 }
 #section__C ul li {
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+}
+
+#section__C ul li:nth-child(+n + 4){
+  margin-bottom: 50px;
 }
 /* progress bar............... */
 .skill {
   width: 95%;
   max-width: 497px;
-  padding-top: 50px;
+  padding-top: 30px;
   overflow: hidden;
 }
 .skill__bar {
@@ -590,36 +600,36 @@ main {
     stroke-dashoffset: 300;
     /* animation: anim 2s linear forwards; */
 }
-.progress.html__ani {
-  animation: html-ani 2s linear forwards;
+.progress.nodejs__ani {
+  animation: nodejs-ani 2s linear forwards;
 }
-.progress.css__ani{
-  animation: css-ani 2s linear forwards;
+.progress.scss__ani{
+  animation: scss-ani 2s linear forwards;
 }
-.progress.java__ani {
-    animation: css-ani 2s linear forwards;
+.progress.javascript__ani {
+    animation: javascript-ani 2s linear forwards;
 }
-.progress.php__ani {
-    animation: php-ani 2s linear forwards;
+.progress.react__ani {
+    animation: react-ani 2s linear forwards;
 }
-@keyframes php-ani {
+@keyframes react-ani {
   100% {
-      stroke-dashoffset: 198;
+      stroke-dashoffset: 170;
   }
 }
-@keyframes java-ani {
+@keyframes javascript-ani {
   100% {
       stroke-dashoffset: 145;
   }
 }
-@keyframes css-ani {
+@keyframes scss-ani {
   100% {
-      stroke-dashoffset: 100;
+      stroke-dashoffset: 150;
   }
 }
-@keyframes html-ani {
+@keyframes nodejs-ani {
   100% {
-    stroke-dashoffset: 80;
+    stroke-dashoffset: 150;
   }
 }
 svg {
