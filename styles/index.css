@@ -44,7 +44,6 @@ a {
   min-height: 70px;
   position: fixed;
   z-index: 2;
-  transition: 0.7s;
   overflow: hidden;
 }
 .navbar.active {
@@ -776,9 +775,20 @@ svg {
   }
   #section__A {
     height: 750px;
+    /* overflow: hidden; */
   }
 
-  #section__A::before {
+  #section__A .abstrat-background{
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    /* z-index: 1; */
+  }
+
+  #section__A .abstrat-background::before {
     content: " ";
     position: absolute;
     top: 10px;
@@ -793,6 +803,7 @@ svg {
     transform: rotate(45deg);
     opacity: 70%;
     display: block;
+
   }
   #section__A .bg__circle {
     position: absolute;
