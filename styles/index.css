@@ -2,8 +2,9 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 4rem;
 }
+
 *, ::before, ::after {
   margin: 0;
   padding: 0;
@@ -240,6 +241,12 @@ main {
   justify-content: center;
   /* overflow: hidden; */
 }
+
+#section__A::before {
+  display: none;
+}
+
+
 #section__A .txt {
   margin-top: 120px;
   padding-bottom: 40px;
@@ -769,6 +776,23 @@ svg {
   }
   #section__A {
     height: 750px;
+  }
+
+  #section__A::before {
+    content: " ";
+    position: absolute;
+    top: 10px;
+    right: -250px;
+    width: 900px;
+    height: 400px;
+    background-image: url('../img/bg-forall.png');
+    background-blend-mode: normal;
+    background-size: 900px 250px;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: rotate(45deg);
+    opacity: 70%;
+    display: block;
   }
   #section__A .bg__circle {
     position: absolute;
