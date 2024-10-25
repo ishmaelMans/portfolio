@@ -722,9 +722,10 @@ svg {
 
 .contact__links a{
   margin: 0 10px 0 10px;
+  color: var(--text-color)
 }
 .contact__links a:hover{
-  color: var(--green-color)
+  color: var(--green-color);
 }
 
 
