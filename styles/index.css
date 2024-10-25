@@ -483,13 +483,14 @@ main {
 /* progress bar............... */
 .skill {
   width: 95%;
-  max-width: 497px;
+  /* max-width: 497px; */
   padding-top: 30px;
   overflow: hidden;
 }
 .skill__bar {
   height: 5px;
   background-color: #cacaca;
+  max-width: 100%;
   border-radius: 8px;
 }
 .skill__per {
