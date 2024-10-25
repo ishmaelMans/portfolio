@@ -593,10 +593,10 @@ main {
     align-items: center;
     justify-content: center;
     /* border: 1px solid red; */
-    box-shadow: inset 4px 4px 6px -1px rgba(199, 199, 199, 0.2),
-                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
-                -0.5px -0.5px 0px rgba(255,255,255,1),
-                0.5px -0.5px 0px rgba(196, 196, 196, 0.15),
+    box-shadow: inset 6px 6px 1px -1px rgb(109, 109, 109),
+                inset -4px -4px 6px -1px rgb(92, 92, 92),
+                /* 5px 5px 0px rgb(38, 38, 38), */
+                5px 5px 0px rgba(196, 196, 196, 0.15),
                 0px 12px 10px -10px rgba(165, 165, 165, 0.5);
 }
 #number {
