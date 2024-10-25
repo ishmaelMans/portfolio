@@ -12,8 +12,9 @@ html {
 }
 :root {
   --nav-color: #555555;
-  --dark-color: #303030;
+  --dark-color: #fff;
   --green-color: #45b835;
+  --text-color: #555;
 }
 body {
   font-family: 'Poppins';
@@ -228,8 +229,8 @@ main {
   width: 100%;
   min-height: 550px;
   background-color: var(--dark-color);
-  border-bottom: 1px dashed #fff;
-  color: #fff;
+  border-bottom: 1px dashed var(--text-color);
+  color:var(--text-color);
   text-align: center;
   line-height: 30px;
   position: relative;
@@ -328,7 +329,7 @@ main {
   content: "";
   position: absolute;
   left: 0;
-  background-color: #303030;
+  background-color: var(--dark-color);
   padding: 16px;
   height: 100%;
   width: 100%;
@@ -391,8 +392,8 @@ main {
   min-height: 800px;
   background-color: var(--dark-color);
   text-align: center;
-  color: #fff;
-  border-bottom: 1px dashed #fff ;
+  color:var(--text-color);
+  border-bottom: 1px dashed var(--text-color);
   overflow: hidden;
 
 }
@@ -432,6 +433,10 @@ main {
   color: #45b835;
   font-weight: bold;
 }
+#section__B ul li a {
+  color: #45b835;
+  color: var(--text-color);
+}
 /* section-B Ends...............................*/
 
 
@@ -442,8 +447,8 @@ main {
   min-height: 600px;
   background-color: var(--dark-color);
   text-align: center;
-  color: #fff;
-  border-bottom: 1px dashed #fff ;
+  color: var(--text-color);
+  border-bottom: 1px dashed var(--text-color) ;
   overflow: hidden;
 
 }
@@ -539,8 +544,8 @@ main {
   min-height: 600px;
   background-color: var(--dark-color);
   text-align: center;
-  color: #fff;
-  border-bottom: 1px dashed #fff ;
+  color: var(--text-color);
+  border-bottom: 1px dashed var(--text-color) ;
   overflow: hidden;
 
 }
@@ -561,7 +566,7 @@ main {
   flex-direction: column;
 }
 #section__D .code__skill h4 {
-  color: #fff;
+  color: var(--text-color);
   padding-top: 30px ;
   padding-bottom: 20px;
 }
@@ -595,7 +600,7 @@ main {
 }
 #number {
     font-weight: 600;
-    color: #fff;
+    color:var(--text-color);
     font-size: 1.4rem;
 }
 .circle {
@@ -655,8 +660,8 @@ svg {
   flex-direction: column;
   background-color: var(--dark-color);
   text-align: center;
-  color: #fff;
-  border-bottom: 1px dashed #fff ;
+  color: var(--text-color);
+  border-bottom: 1px dashed var(--text-color) ;
   overflow: hidden;
 }
 
@@ -703,7 +708,7 @@ svg {
   min-height: 400px;
   background-color: var(--dark-color);
   text-align: center;
-  color: #fff;
+  color: var(--text-color);
   overflow: hidden;
 }
 
@@ -778,7 +783,7 @@ svg {
     /* overflow: hidden; */
   }
 
-  #section__A .abstrat-background{
+  #section__A .abstract-background{
     position: relative;
     width: 100%;
     min-height: 550px;
@@ -788,7 +793,7 @@ svg {
     /* z-index: 1; */
   }
 
-  #section__A .abstrat-background::before {
+  #section__A .abstract-background::before {
     content: " ";
     position: absolute;
     top: 10px;
