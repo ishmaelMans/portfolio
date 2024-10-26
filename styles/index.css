@@ -208,6 +208,7 @@ main {
 }
 /* showcase Starts................................... */
 #showcase {
+  position: relative;
   width: 100%;
   min-height: 600px;
   overflow: hidden;
@@ -218,6 +219,20 @@ main {
   position: fixed;
   z-index: -2;
 }
+
+#showcase video{
+  position: absolute;
+  top: -10px;
+  left:0;
+  mix-blend-mode: screen;
+}
+
+#showcase video::-webkit-media-controls{
+  display: none !important;
+}
+#showcase video::-webkit-media-controls-overlay-enclosure{
+  display: none !important;
+}
 /* showcase Ends..................................... */
 
 
@@ -227,7 +242,7 @@ main {
 /* section-A Ismael-Mansaray Starts.................................. */
 #section__A {
   width: 100%;
-  min-height: 550px;
+  min-height: 450px;
   background-color: var(--dark-color);
   border-bottom: 1px dashed var(--text-color);
   color:var(--text-color);
@@ -602,8 +617,9 @@ main {
 #number {
     font-weight: 600;
     color:var(--text-color);
-    font-size: 1.4rem;
+    font-size: 1.3em;
 }
+
 .circle {
     fill: none;
     stroke: url(#GradientColor);
@@ -773,6 +789,22 @@ svg {
     width: 45%;
     height: 100vh;
   }
+
+    #showcase video {
+      position: absolute;
+      top: -50px;
+      left: 0;
+      mix-blend-mode: screen;
+    }
+  
+    #showcase video::-webkit-media-controls {
+      display: none !important;
+    }
+  
+    #showcase video::-webkit-media-controls-overlay-enclosure {
+      display: none !important;
+    }
+
   main {
     position: absolute;
     top: 0;
