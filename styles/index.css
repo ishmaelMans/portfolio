@@ -207,6 +207,26 @@ main {
   
 }
 /* showcase Starts................................... */
+#trail{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(0,0,0,0);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes trail-animation{
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
 #showcase {
   position: relative;
   width: 100%;
@@ -286,11 +306,11 @@ main {
   left: 10px;
   animation: moving-circle 1s linear infinite;
 }
-@keyframes moving-circle {
+/* @keyframes moving-circle {
   0% {
     transform: rotate(360deg)
   }
-}
+} */
 #section__A .bg__circle::after {
   content: '';
   position: absolute;
@@ -747,6 +767,15 @@ svg {
 
 
 /* media query ....................................*/
+@media only screen and (max-width: 360px){
+  #showcase video {
+      position: absolute;
+      top: 40px;
+      left: 0px;
+      mix-blend-mode: screen;
+    }
+}
+
 @media only screen and (min-width: 990px) {
   html {
     scroll-padding-top: 6rem;
@@ -790,20 +819,20 @@ svg {
     height: 100vh;
   }
 
-    #showcase video {
-      position: absolute;
-      top: -50px;
-      left: 0;
-      mix-blend-mode: screen;
-    }
-  
-    #showcase video::-webkit-media-controls {
-      display: none !important;
-    }
-  
-    #showcase video::-webkit-media-controls-overlay-enclosure {
-      display: none !important;
-    }
+  #showcase video {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    mix-blend-mode: screen;
+  }
+
+  #showcase video::-webkit-media-controls {
+    display: none !important;
+  }
+
+  #showcase video::-webkit-media-controls-overlay-enclosure {
+    display: none !important;
+  }
 
   main {
     position: absolute;

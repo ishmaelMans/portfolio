@@ -111,9 +111,19 @@ function playVideo() {
   video.play();
 }
 
-setTimeout(playVideo, 5000);
+setTimeout(playVideo, 3000);
 
 video.addEventListener("ended", function () {
   video.pause();
-  setTimeout(playVideo, 5000);
+  setTimeout(playVideo, 3000);
+});
+
+//Hover color change
+document.addEventListener("mousemove", function (e) {
+  let trail = document.getElementById("trail");
+  let color = "hsl(" + Math.random() * 360 + ", 100%, 50%)";
+  trail.style.background = color;
+  trail.style.left = e.pageX + "px";
+  trail.style.top = e.pageY + "px";
+  trail.style.animation = "tail-animation 1s ease-out forwards";
 });
