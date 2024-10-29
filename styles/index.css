@@ -2,7 +2,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 6rem;
 }
 
 *, ::before, ::after {
@@ -781,7 +781,7 @@ svg {
 
 @media only screen and (min-width: 980px) {
   html {
-    scroll-padding-top: 1rem;
+    scroll-padding-top: 6rem;
   }
   .open__slide {
     display: none;
