@@ -37,12 +37,12 @@ a {
 
 /* navbar Starts....................................... */
 .navbar {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   /* width: 497px; */
-  min-height: 70px;
+  min-height: 60px;
   position: fixed;
   z-index: 2;
   overflow: hidden;
@@ -770,15 +770,18 @@ svg {
 @media only screen and (max-width: 360px){
   #showcase video {
       position: absolute;
-      top: 40px;
+      height: 600px;
+      top: -20px;
       left: 0px;
       mix-blend-mode: screen;
+      display: none;
     }
+
 }
 
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 980px) {
   html {
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 1rem;
   }
   .open__slide {
     display: none;
@@ -790,8 +793,6 @@ svg {
   .navbar {
     width: 50%;
     margin: 30px 30px;
-    /* border: 1px solid #00ff00;
-    box-shadow: 0 0 20px #00ff00; */
     position: absolute;
     right: 0;
     top: 0;
