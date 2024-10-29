@@ -37,13 +37,13 @@ a {
 
 /* navbar Starts....................................... */
 .navbar {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   /* width: 497px; */
   min-height: 60px;
-  /* position: fixed; */
+  position: fixed;
   z-index: 2;
   overflow: hidden;
 }
