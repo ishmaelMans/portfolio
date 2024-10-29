@@ -43,7 +43,7 @@ a {
   align-items: center;
   /* width: 497px; */
   min-height: 60px;
-  position: fixed;
+  /* position: fixed; */
   z-index: 2;
   overflow: hidden;
 }
